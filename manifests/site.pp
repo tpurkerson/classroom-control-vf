@@ -43,7 +43,7 @@ node default {
   include skeleton
   include hosts
   
-  include users
+#  include users
   
   notify { "Hello, ZZ my name is ${::hostname}": }
   
