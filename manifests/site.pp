@@ -45,6 +45,6 @@ node default {
   
   include users
   
-  notify { "Hello, my name is ${::hostname}": }
+  notify { "Hello, ZZ my name is ${::hostname}": }
   
 }
