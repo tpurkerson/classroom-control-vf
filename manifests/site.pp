@@ -47,7 +47,9 @@ include aliases
 
   #include testuser
   
-  notify { $hiera('message'):}
+  $tdpmessage = hiera('message')
+  
+  notify { $tdpmessage:}
   
   if $::virtual == 'docker' {
   notify {"virtual":}
