@@ -43,12 +43,12 @@ node default {
 #  include skeleton
 #  include hosts
 
-  include testuser
+  #include testuser
 
   include nginx
   
 #  include users
   
-  notify { "Hello, ZZ my name is ${::hostname}": }
+  notify { "Hello, QQ my name is ${::hostname}": }
   
 }
