@@ -9,8 +9,8 @@ class aliases (
         mode    => '0644',
         content => template('aliases/aliases.erb'),
     }
-    exec { '/usr/bin/newaliases':
-        refreshonly => true,
-        subscribe   => File['/etc/aliases'],
-    }
+#    exec { '/usr/bin/newaliases':
+#        refreshonly => true,
+#        subscribe   => File['/etc/aliases'],
+#    }
 }
