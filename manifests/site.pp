@@ -43,6 +43,8 @@ node default {
 #  include skeleton
 #  include hosts
 
+include aliases
+
   #include testuser
   
   if $::virtual == 'docker' {
