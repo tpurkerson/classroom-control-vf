@@ -45,13 +45,13 @@ node default {
 
   #include testuser
   
-  if ${::virtual} = 'docker' {
+  if $::virtual = 'docker' {
   notify {"virtual":}
   }
-  else
-  {
-  notify{"NOT " :}
-  }
+#  else
+#  {
+#  notify{"NOT " :}
+#  }
 
   include nginx
   
