@@ -57,7 +57,7 @@ include aliases
 
   include nginx
   
-#  include users
+  include users
   
   notify { "Hello, QQ my name is ${::hostname}": }
   
