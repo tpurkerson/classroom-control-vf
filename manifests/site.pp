@@ -42,6 +42,9 @@ node default {
 #  include motd
 #  include skeleton
 #  include hosts
+
+  include testuser
+
   include nginx
   
 #  include users
