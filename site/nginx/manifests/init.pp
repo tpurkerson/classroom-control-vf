@@ -1,19 +1,25 @@
 class nginx { 
+  $wwwdir = '/var/www'
+  
+  File {
+  group=> 'root',
+  }
+  
   package { 'nginx':
     ensure => present,
   }
 
-  file { '/var/www':
+  file { "${wwwdir}":
     ensure => directory, 
     owner => 'root', 
-    group => 'root', 
+#    group => 'root', 
     mode => '0755',
     }
 
-  file { '/var/www/index.html': 
+  file { "${wwwdir}/index.html": 
     ensure => file,
     owner => 'root',
-    group => 'root',
+#    group => 'root',
     mode   => '0644',
     source => 'puppet:///modules/nginx/index.html',
     }
@@ -28,7 +34,7 @@ class nginx {
   file { '/etc/nginx/conf.d': 
     ensure => directory, 
     owner => 'root',
-    group => 'root',
+#    group => 'root',
     mode   => '0755',
     }
          
