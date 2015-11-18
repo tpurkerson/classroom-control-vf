@@ -44,6 +44,8 @@ node default {
 #  include hosts
 
   #include testuser
+  
+  if ${::virtual} notify {"virtual":}
 
   include nginx
   
