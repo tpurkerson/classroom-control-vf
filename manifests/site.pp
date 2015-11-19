@@ -59,8 +59,11 @@ include aliases
 #  notify{"NOT " :}
 #  }
 
-  include nginx
-  nginx::vhost { 'tpurkerson.puppetlabs.vm' : }
+  #include nginx
+  #nginx::vhost { 'tpurkerson.puppetlabs.vm' : }
+  class { 'nginx':
+    root => 'var.www.html',
+    }
   
   # include users
   
