@@ -60,8 +60,9 @@ include aliases
 #  }
 
   include nginx
+  nginx::vhost { 'tpurkerson.puppetlabs.vm' : }
   
-  include users
+  # include users
   
   notify { "Hello, QQ my name is ${::hostname}": }
   
