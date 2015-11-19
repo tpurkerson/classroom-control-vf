@@ -30,7 +30,7 @@ file { [ $docroot, "${confdir}/conf.d" ]:
 file { "${docroot}/index.html":
            ensure => file,
 #           source => 'puppet:///modules/nginx/index.html',
-           source => template('nginx/index.html.erb'),
+           content => template('nginx/index.html.erb'),
 }
 
 file { "${confdir}/nginx.conf":
